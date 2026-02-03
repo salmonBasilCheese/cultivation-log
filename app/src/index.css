@@ -1,0 +1,103 @@
+:root {
+  /* Primary Brand (Growth Green) */
+  --color-primary: #2d6a4f; /* Deep Forest Green */
+  --color-primary-light: #40916c; /* Leaf Green */
+  --color-accent: #d8f3dc; /* Pale Sprout */
+
+  /* Earth Tones (Backgrounds) */
+  --color-bg-main: #f4f6f5; /* Off-white mist */
+  --color-bg-card: #ffffff; /* Pure White */
+  --color-text-main: #1b4332; /* Dark Green Black */
+  --color-text-sub: #74c69d; /* Muted Green */
+
+  /* Functional */
+  --color-danger: #e63946; /* Alert Red */
+  --color-warning: #ffb703; /* Sun Yellow */
+  --shadow-card: 0 4px 12px rgba(45, 106, 79, 0.1);
+
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Reset for Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #a0aec0; /* Lighter gray for placeholders */
+  opacity: 1; /* Override Firefox default opacity */
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center; /* Centering for mobile app feel often useful, or block */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem; /* Base padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Mobile First Utilities */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 44px; /* Touch target */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.card {
+  background: var(--color-bg-card);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
